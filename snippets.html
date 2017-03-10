@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <!--Import materialize.css-->
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,300,500,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/global.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/responsive.css" media="screen,projection"/>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <!-- Fine Uploader Gallery CSS file
+====================================================================== -->
+    <link href="all.fine-uploader/fine-uploader-gallery.css" rel="stylesheet">
+
+    <!-- Fine Uploader S3 JS file
+    ====================================================================== -->
+    <script src="all.fine-uploader/all.fine-uploader.js"></script>
+
+    <!-- Fine Uploader Customized Gallery template
+    ====================================================================== -->
+    <script type="text/template" id="qq-template-s3">
+        <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="">
+
+            <img class="cloud" src="img/cloud_178X116.png">
+            <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+                <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+            </div>
+            <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+
+                <span class="qq-upload-drop-area-text-selector"></span>
+            </div>
+            <div class="qq-upload-button-selector qq-upload-button">
+                <div>
+                    <p>Перетащите в это поле файлы или <span>выберите их вручную</span></p>
+                    <h6 class="col s12 center center-align">Вы также можете дать нам ссылку на <a class="btn modal-trigger" href="#modal1">
+                        <img class="icon" src="img/dropbox_31X28.png">
+                        <img class="icon" src="img/google_drive_30X26.png">
+                        <img class="icon" src="img/yandex_40X28.png">
+                    </a> или другое хранилище ваших файлов</h6>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <a href="#" class="modal-action modal-close right-align"><span class="lnr lnr-cross-circle  red-text text-darken-3"></span></a>
+                            <div class="input-field col s12 center-align">
+                                <input id="link" class="link" placeholder="Вставьте сюда адрес ссылки"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <span class="qq-drop-processing-selector qq-drop-processing">
+                <span>Processing dropped files...</span>
+                <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+            </span>
+            <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
+                <li>
+                    <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                    <div class="qq-progress-bar-container-selector qq-progress-bar-container">
+                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                    </div>
+                    <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                    <div class="qq-thumbnail-wrapper">
+                        <a class="preview-link" target="_blank">
+                            <img class="qq-thumbnail-selector" qq-max-size="120" qq-server-scale>
+                        </a>
+                    </div>
+                    <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
+                    <button type="button" class="qq-upload-retry-selector qq-upload-retry">
+                        <span class="qq-btn qq-retry-icon" aria-label="Retry"></span>
+                        Retry
+                    </button>
+
+                    <div class="qq-file-info">
+                        <div class="qq-file-name">
+                            <span class="qq-upload-file-selector qq-upload-file"></span>
+                            <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
+                        </div>
+                        <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                        <span class="qq-upload-size-selector qq-upload-size"></span>
+                        <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
+                            <span class="qq-btn qq-delete-icon" aria-label="Delete"></span>
+                        </button>
+                        <button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
+                            <span class="qq-btn qq-pause-icon" aria-label="Pause"></span>
+                        </button>
+                        <button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
+                            <span class="qq-btn qq-continue-icon" aria-label="Continue"></span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+            <dialog class="qq-alert-dialog-selector">
+                <div class="qq-dialog-message-selector"></div>
+                <div class="qq-dialog-buttons">
+                    <button type="button" class="qq-cancel-button-selector">Close</button>
+                </div>
+            </dialog>
+
+            <dialog class="qq-confirm-dialog-selector">
+                <div class="qq-dialog-message-selector"></div>
+                <div class="qq-dialog-buttons">
+                    <button type="button" class="qq-cancel-button-selector">No</button>
+                    <button type="button" class="qq-ok-button-selector">Yes</button>
+                </div>
+            </dialog>
+
+            <dialog class="qq-prompt-dialog-selector">
+                <div class="qq-dialog-message-selector"></div>
+                <input type="text">
+                <div class="qq-dialog-buttons">
+                    <button type="button" class="qq-cancel-button-selector">Cancel</button>
+                    <button type="button" class="qq-ok-button-selector">Ok</button>
+                </div>
+            </dialog>
+        </div>
+    </script>
+
+    <style>
+        #fine-uploader-s3 .preview-link {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .qq-gallery.qq-uploader {
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .qq-uploader-selector.qq-uploader.qq-gallery img {
+            text-align: center;
+            display: block;
+            margin: 30px auto 10px;
+        }
+
+        .qq-gallery .qq-upload-button {
+            display: block;
+            max-width: 1170px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
+            float: none;
+            text-align: center;
+            background: transparent;
+            color: #000;
+            border-radius: 0;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .qq-gallery .qq-upload-button:focus {
+            outline: none !important;
+        }
+
+
+        .qq-upload-button-selector.qq-upload-button p {
+            text-transform: uppercase;
+        }
+
+        .qq-upload-button-selector.qq-upload-button p span {
+            color: #ff9100;
+            cursor: pointer;
+        }
+
+        .qq-upload-button-selector.qq-upload-button input {
+            max-width: 45%;
+            cursor: pointer !important;
+        }
+
+        .qq-upload-button-selector.qq-upload-button input.link {
+            max-width: 90%;
+            margin-bottom: 25px;
+        }
+
+        .qq-upload-button-selector.qq-upload-button a {
+            background: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            height: 50px;
+            box-shadow: none;
+            z-index: 999;
+        }
+
+        .qq-upload-button-selector.qq-upload-button a img.icon {
+            display: inline-block !important;
+            margin: 0 8px !important;
+        }
+
+        .modal-content {
+            position: relative;
+        }
+
+        .modal-content a.modal-action.modal-close.right-align {
+            background: transparent;
+            border: 0;
+            position: absolute;
+            right: -10px;
+            top: -13px;
+            font-size: 20px;
+        }
+
+    </style>
+
+    <!--Form-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        function AjaxFormRequest(result_id,formMain,url) {
+            jQuery.ajax({
+                url:     url,
+                type:     "POST",
+                dataType: "html",
+                data: jQuery("#"+formMain).serialize(),
+                success: function(response) {
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) {
+                    document.getElementById(result_id).innerHTML = "<p>Заполните поле 'Название видеоролика'</p>";
+                }
+            });
+
+            $(':input','#formMain')
+                    .not(':button, :submit, :reset, :hidden')
+                    .val('')
+                    .removeAttr('checked')
+                    .removeAttr('selected');
+        }
+    </script>
+
+</head>
+
+<body>
+
+<!--HEADER-->
+<header class="blue-grey darken-3">
+    <nav class="navbar transparent">
+        <div class="nav-wrapper transparent">
+            <div class="container">
+                <div class="row">
+                    <a href=index.html class="logo hide-on-large-only"><img src="img/logo2.png" alt="CLIP24"></a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse right right-align"><i class="material-icons white-text right-align">menu</i></a>
+
+
+                    <ul id="nav-main" class="main-nav hide-on-med-and-down">
+                          <li class="col l3 m3 center-align"><a href="#work">Как это работает</a></li>
+                          <li class="prices col l1 m1 right-align"><a href="#prices">Цены</a></li>
+                          <li class="col l3 m3 center-align hide-on-med-and-down"><a href="index.html" class="logo"><img src="img/logo2.png" alt="CLIP24"></a></li>
+                          <li class="examples col l2 m2 center-align"><a href="#examples">Примеры</a></li>
+                          <li class="col l1 m1 right-align"><a class="btn-round-orange" href="#prices">Заказать</a></li>
+                          <li class="social col l2 m2 right-align">
+                              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                              <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                          </li>
+                       </ul>
+
+                    <ul class="side-nav" id="mobile-nav">
+                        <li class=""><a href="#workMob">Как это работает</a></li>
+                        <li class=""><a href="#prices">Цены</a></li>
+                        <li class=""><a href="#examples">Примеры</a></li>
+                        <li class=""><a class="btn-round-orange" href="#prices">Заказать</a></li>
+                        <li class="social">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--  MAIN  -->
+
+<!-- UPLOAD Section   -->
+<div  class="section prices upload">
+    <div class="container">
+
+        <div class="row">
+
+            <h3 class="center-align">Загрузите видео-файлы</h3>
+
+
+            <!-- Fine Uploader DOM Element
+====================================================================== -->
+            <div id="fine-uploader-s3"></div>
+
+        </div>
+
+
+        <form method="post" action="" id="formMain" name="formMain" role="form">
+            <div class="row">
+                <div class="input-field col l12 m12 s12 center-align">
+                    <h6 class="center-align">Hазвание видеоролика</h6>
+                    <input id="name" name="name" placeholder="Material design"  type="text" class="validate" required/>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6 m6 s12 center-align">
+                    <div class="input-field">
+                        <h6 class="center-align">будет публикация в интернете</h6>
+                        <select class="center-align">
+                            <option value="1">YouTube</option>
+                            <option value="2">Facebook</option>
+                            <option value="3">Instagram</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="timing col l6 m6 s12 center-align">
+                    <h6 class="center-align">настроение музыки</h6>
+                    <select class="left-align">
+                        <option value="1">Джаз</option>
+                        <option value="2">Лаунж</option>
+                        <option value="3">Рок</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6 m6 s12">
+                    <p class="additional center-align">
+                        <input type="checkbox" class="filled-in" id="filled-in-box1"/>
+                        <label for="filled-in-box1">сохранять хронологию видео</label>
+                    </p>
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <p class="additional center-align">
+                        <input type="checkbox" class="filled-in" id="filled-in-box2"/>
+                        <label for="filled-in-box2">использовать оригинальный звук</label>
+                    </p>
+                </div>
+
+                </div>
+
+            <div class="row contacts">
+                <div class="input-field col l12 m12 s12">
+                    <textarea class="suggestions" placeholder="Особые пожелания"></textarea>
+                </div>
+            </div>
+
+
+            <div id="messegeResult" class="center-align"></div>
+
+            <div class="row submit center-align">
+                <a class="button"  type="submit"  onclick="AjaxFormRequest('messegeResult', 'formMain', 'form3.php')">заказать</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<!--DIVIDER-->
+<div class="row"></div>
+
+
+<!-- CONFIRMATION   -->
+
+<div id="confirmation"  class="section prices">
+    <div class="container">
+        <div class="row">
+
+            <h3 class="center-align">Спасибо, Ваш заказ №023-424-253</h3>
+                    <div class="col s12 center-align">
+                        <h6 class="status">Мы приняли в работу ваш заказ, обновление можно увидеть по <a href="#status">ссылке</a></h6>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--DIVIDER-->
+<div class="row"></div>
+
+
+
+<!-- Check   -->
+
+<div id="status"  class="section prices status">
+    <div class="container">
+        <div class="row">
+            <h4 class="col s12">Заказ №11-234-234</h4>
+            <div class="col s12">
+                <h6>Описание задания</h6>
+                <p>Сделать связанный ролик из представленных</p>
+
+            </div>
+
+            <div class="col l10 m10 s12">
+                <h6>Длительность ролика</h6>
+                <p>5 мин.</p>
+            </div>
+            <div class="col l2 m2 s12">
+                <h6>Стоимость:</h6>
+                <p class="price">500 &#8381;</p>
+            </div>
+
+            <div class="col s12">
+                <h6>Приложение: 4 файла объемом 410 МВ</h6>
+                <p class="bold">Статус заказа: в работе</p>
+            </div>
+        </div>
+        <div class="row submit right-align">
+            <a class="button" type="submit" href="#cancellation">отменить заказ</a>
+        </div>
+    </div>
+</div>
+
+<!--DIVIDER-->
+<div class="row"></div>
+
+<!-- CANCELLATION   -->
+
+<div id="cancellation"  class="section prices">
+    <div class="container">
+        <div class="row">
+
+            <h3 class="center-align">Ваш заказ №023-424-253 отменен</h3>
+            <div class="col s12 center-align">
+                <h6 class="status">Вы отменили заказ, восстановить заказ или сделать новый можно <a href="index.html">здесь</a></h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--DIVIDER-->
+<div class="row"></div>
+
+<!-- Video   -->
+
+<div  class="section prices status">
+    <div class="container">
+        <div class="row">
+            <h4 class="col s12">Заказ №11-234-234</h4>
+            <div class="col s12">
+                <h6>Описание задания</h6>
+                <p>Сделать связанный ролик из представленных</p>
+
+            </div>
+
+            <div class="col l10 m10 s12">
+                <h6>Длительность ролика</h6>
+                <p>5 мин.</p>
+            </div>
+            <div class="col l2 m2 s12">
+                <h6>Стоимость:</h6>
+                <p class="price">500 &#8381;</p>
+            </div>
+
+            <div class="col s12">
+                <h6>Приложение: 4 файла объемом 410 МВ</h6>
+                <p class="bold">Статус заказа: в работе</p>
+            </div>
+        </div>
+        <div class="video-block col s12">
+            <div class="video-container">
+                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                <a href=index.html class="logo-video"><img src="img/logo2.png" alt="CLIP24"></a>
+            </div>
+        </div>
+        <div class="row submit right-align">
+            <a class="button confirm-green" href="#downloadVideo" type="submit">подтвердить выполнение и оплатить работу</a>
+        </div>
+    </div>
+</div>
+
+<!--DIVIDER-->
+<div class="row"></div>
+
+<!-- Video2   -->
+
+<div id="downloadVideo"  class="section prices status">
+    <div class="container">
+        <div class="row no-marg">
+            <h4 class="col s12">Заказ №11-234-234</h4>
+            <div class="col s12">
+                <h6>Описание задания</h6>
+                <p>Сделать связанный ролик из представленных</p>
+
+            </div>
+
+            <div class="col l10 m10 s12">
+                <h6>Длительность ролика</h6>
+                <p>5 мин.</p>
+            </div>
+            <div class="col l2 m2 s12">
+                <h6>Стоимость:</h6>
+                <p class="price">500 &#8381;</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col l7 m7 s12">
+                <h6>Приложение: 4 файла объемом 410 МВ</h6>
+                <p class="bold">Статус заказа: оплачен</p>
+            </div>
+
+            <div class="col l5 m5 s12">
+                <p class="download right-align"><a href="" download="">Скачать видео-ролик</a></p>
+            </div>
+        </div>
+        <div class="video-block col s12">
+            <div class="video-container">
+                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                <a href=index.html class="logo-video"><img src="img/logo2.png" alt="CLIP24"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER   -->
+<footer>
+  <div class="section">
+    <div class="container">
+        <div class="row">
+            <p class="center-align white-text">Copyright ©  by Clip24 2016<a href="#prices">Обратная связь</a></p>
+        </div>
+    </div>
+  </div>
+</footer>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+
+<script>
+    var s3Uploader = new qq.s3.FineUploader({
+        debug: true,
+        element: document.getElementById('fine-uploader-s3'),
+        template: 'qq-template-s3',
+        request: {
+            endpoint: "upload.fineuploader.com",
+            accessKey: "AKIAJB6BSMFWTAXC5M2Q"
+        },
+        signature: {
+            endpoint: "http://s3-demo.fineuploader.com/s3demo-thumbnails-cors.php"
+        },
+        uploadSuccess: {
+            endpoint: "http://s3-demo.fineuploader.com/s3demo-thumbnails-cors.php?success",
+            params: {
+                isBrowserPreviewCapable: qq.supportedFeatures.imagePreviews
+            }
+        },
+        iframeSupport: {
+            localBlankPagePath: "/server/success.html"
+        },
+        cors: {
+            expected: true
+        },
+        chunking: {
+            enabled: true
+        },
+        resume: {
+            enabled: true
+        },
+        deleteFile: {
+            enabled: true,
+            method: "POST",
+            endpoint: "http://s3-demo.fineuploader.com/s3demo-thumbnails-cors.php"
+        },
+        validation: {
+            itemLimit: 5,
+            sizeLimit: 15000000
+        },
+        thumbnails: {
+            placeholders: {
+                notAvailablePath: "/server/not_available-generic.png",
+                waitingPath: "/server/waiting-generic.png"
+            }
+        },
+        callbacks: {
+            onComplete: function(id, name, response) {
+                var previewLink = qq(this.getItemByFileId(id)).getByClass('preview-link')[0];
+
+                if (response.success) {
+                    previewLink.setAttribute("href", response.tempLink)
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

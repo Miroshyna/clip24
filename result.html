@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <!--Import materialize.css-->
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,300,500,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/animate.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/global.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/responsive.css" media="screen,projection"/>
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Fotorama-->
+    <!-- 1. Link to jQuery (1.8 or later), -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+    <!-- 33 KB -->
+
+    <!-- fotorama.css & fotorama.js. -->
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+    <style>
+        .fotorama__thumb-border {
+            border-color: #ff6008;
+        }
+    </style>
+
+</head>
+
+<body>
+<!--HEADER-->
+<header>
+    <nav class="navbar transparent">
+        <div class="nav-wrapper transparent">
+            <div class="container">
+                <div class="row">
+                    <a href=index.html class="logo hide-on-large-only"><img src="img/logo2.png" alt="CLIP24"></a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse right right-align"><i class="material-icons white-text right-align">menu</i></a>
+
+
+                    <ul id="nav-main" class="main-nav hide-on-med-and-down">
+                        <li class="col l3 m3 center-align"><a href="#work">Как это работает</a></li>
+                        <li class="prices col l1 m1 right-align"><a href="#prices">Цены</a></li>
+                        <li class="col l3 m3 center-align hide-on-med-and-down"><a href="index.html" class="logo"><img src="img/logo2.png" alt="CLIP24"></a></li>
+                        <li class="examples col l2 m2 center-align"><a href="#examples">Примеры</a></li>
+                        <li class="col l1 m1 right-align"><a class="btn-round-orange" href="#prices">Заказать</a></li>
+                        <li class="social col l2 m2 right-align">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+
+                    <ul class="side-nav" id="mobile-nav">
+                        <li class=""><a href="#workMob">Как это работает</a></li>
+                        <li class=""><a href="#prices">Цены</a></li>
+                        <li class=""><a href="#examples">Примеры</a></li>
+                        <li class=""><a class="btn-round-orange" href="#prices">Заказать</a></li>
+                        <li class="social">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--  MAIN  -->
+
+<!-- Promo   -->
+<div class="section promo no-pad">
+    <div class="container">
+        <div class="row center-align">
+            <h2 class="white-text">профессиональный видеоМонтаж <span class="orange-text">от 500 рублей</span></h2>
+            <p class="description white-text">Хотите красивый ролик на память о дне рождения?<br>Осталось много разрозненного видео с корпоратива?<br>Или просто  пришло вермя упорядочить семейный видеоархив?</p>
+            <h6 class="orange-text">Вы обратились по адресу</h6>
+
+            <a href="#examples" class="btn-round-white center">Смотреть работы</a>
+            <a class="anchor center-align" href="#work">
+                <img class="" src="img/arrow_up.png">
+                <img class="light07 fadeIn wow" data-wow-delay="0.5s" data-wow-iteration="10000" src="img/arrow-down-icon07.png">
+                <img class="main fadeIn wow" data-wow-delay="1s" data-wow-iteration="10000" src="img/arrow-down-icon.png">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Work   -->
+<div class="section work no-pad hide-on-med-and-down">
+    <div class="container">
+
+        <h3 class="center-align">как это работает</h3>
+        <div id="work" class="row scrollspy">
+            <div class="col l4 m6 s12 fadeIn wow center-align" data-wow-delay="0s">
+                <img class="center" src="img/flat-video_218.png">
+                <p class="center-align"><span class="number">01</span><br>Загрузите исходные видео</p>
+            </div>
+            <div class="col l4 m6 s12 fadeIn wow center-align" data-wow-delay="0.3s">
+                <img class="center"  src="img/flat-cut_218.png">
+                <p class="center-align"><span class="number">02</span><br>Укажите свои пожелания<br>и длительность итогового видео</p>
+            </div>
+            <div class="col l4 m6 s12 fadeIn wow center-align" data-wow-delay="0.6s">
+                <img class="center"  src="img/flat-price_218.png">
+                <p class="center-align"><span class="number">03</span><br>Подтвердите цену работ</p>
+            </div>
+
+            <div class="col l4 m6 s12 fadeIn wow center-align" data-wow-delay="1.2s">
+                <img class="center" src="img/flat-end_218.png">
+                <p class="center-align"><span class="number">04</span><br>Дождитесь завершения работ</p>
+            </div>
+            <div class="col l4 m6 s12 fadeIn wow center-align" data-wow-delay="1.5s">
+                <img class="center" src="img/flat-result_218.png">
+                <p class="center-align"><span class="number">05</span><br>Оцените результат</p>
+            </div>
+            <div class="col l4 m6 s12 fadeIn wow center-align" data-wow-delay="1.8s">
+                <img class="center" src="img/flat-money_218.png">
+                <p class="center-align"><span class="number">06</span><br>Оплатите работу</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Work-mobile   -->
+<div class="section work no-pad hide-on-large-only">
+    <div class="container">
+
+        <h3 class="center-align">как это работает</h3>
+        <div id="workMob" class="row scrollspy">
+
+            <div class="col m6 s12 center-align">
+                <img class="center" src="img/flat-video_218.png">
+                <p class="center-align"><span class="number">01</span><br>Загрузите исходные видео</p>
+            </div>
+            <div class="col m6 s12 center-align">
+                <img class="center"  src="img/flat-cut_218.png">
+                <p class="center-align"><span class="number">02</span><br>Укажите свои пожелания<br>и длительность итогового видео</p>
+            </div>
+            <div class="col m6 s12 center-align">
+                <img class="center"  src="img/flat-price_218.png">
+                <p class="center-align"><span class="number">03</span><br>Подтвердите цену работ</p>
+            </div>
+
+            <div class="col m6 s12 center-align">
+                <img class="center" src="img/flat-end_218.png">
+                <p class="center-align"><span class="number">04</span><br>Дождитесь завершения работ</p>
+            </div>
+            <div class="col m6 s12 center-align">
+                <img class="center" src="img/flat-result_218.png">
+                <p class="center-align"><span class="number">05</span><br>Оцените результат</p>
+            </div>
+            <div class="col m6 s12 center-align">
+                <img class="center" src="img/flat-money_218.png">
+                <p class="center-align"><span class="number">06</span><br>Оплатите работу</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Prices   -->
+<div  class="section prices result">
+    <div class="container">
+        <div class="row">
+            <h3 class="center-align">спасибо</h3>
+
+               <p class="result first center-align">Ваш заказ <span class="number"> №123 </span> принят в работу.</p>
+               <p class="result center-align">В скором времени с вами свяжется наш специалист для уточнения деталей.</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- Gallery   -->
+<div class="section gallery no-pad ">
+    <div class="container">
+        <div class="row center-align">
+            <h3 class="center-align">примеры наших работ</h3>
+
+            <div  id="examples" class="fotorama center-block scrollspy" data-nav="thumbs" data-thumbwidth="170" data-thumbheight="120" data-width="768"  data-maxwidth="100%" data-ratio="768/505" data-allowfullscreen="native" data-arrows="true" data-swipe="true"  data-transition="crossfade">
+                <a href="https://vimeo.com/155306106" data-img="">
+                    <img src="" width="170" height="120"></a>
+                <a href="https://vimeo.com/96572972" data-img="">
+                    <img src="" width="170" height="120"></a>
+                <a href="https://youtu.be/aFvb7pQoBuA" data-img="">
+                    <img src="" width="170" height="120"></a>
+                <a href="https://youtu.be/Caebr5LhVH4" data-img="">
+                    <img src="" width="170" height="120"></a>
+                <a href="https://youtu.be/hXr_R9wLU-E" data-img="">
+                    <img src="" width="170" height="120"></a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Statistic   -->
+<div class="section statistic no-pad">
+    <div class="container">
+        <div class="row">
+            <h3 id="statistic" class="center-align">немного статистики</h3>
+
+            <div class="col l4 m4 s12 center-align scrollspy">
+                <div class="card projects center-align fadeIn wow center-align" data-wow-delay="0s">
+                    <div class="card-content white-text">
+                        <img src="img/video_41x30.png">
+                        <div class="count white-text">12</div>
+                        <p class="white-text center-align">Проектов выполнено</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col l4 m4 s12 center-align">
+                <div class="card price center-align fadeIn wow center-align" data-wow-delay="0.5s">
+                    <div class="card-content white-text">
+                        <img class="wallet" src="img/wallet_41x43.png">
+                        <div class="count white-text">1250 руб.</div>
+                        <p class="white-text center-align">средняя стоимость<br>заказа</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col l4 m4 s12 center-align">
+                <div class="card timing center-align fadeIn wow center-align" data-wow-delay="1s">
+                    <div class="card-content white-text">
+                        <img src="img/clock_38.png">
+                        <div class="count white-text">13 часов</div>
+                        <p class="white-text center-align">среднее время<br>обработки заказа</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row center-align">
+                <a class="button center-align" href="#prices">разместить заказ</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER   -->
+<footer>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <p class="center-align white-text">Copyright ©  by Clip24 2016<a href="#prices">Обратная связь</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/init.js"></script>
+<script>new WOW().init();</script>
+</body>
+</html>
