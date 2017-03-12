@@ -1,2 +1,2 @@
 # clip24
-clip24 project
+html5, css3, jquery, php
